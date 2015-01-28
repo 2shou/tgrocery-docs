@@ -10,13 +10,43 @@ TextGrocery是一个基于\ `LibLinear <http://www.csie.ntu.edu.tw/~cjlin/liblin
 
 `GitHub项目链接 <https://github.com/2shou/TextGrocery>`_
 
-索引
+性能
+====
+
+* 训练集：来自32个类别的4.8万条中文新闻标题
+* 测试集：来自32个类别的1.6万条中文新闻标题
+* 与scikit-learn的svm和朴素贝叶斯算法做横向对比
+
+========================  =============  ===============
+分类器                      准确率（%）           计算时间（秒）
+========================  =============  ===============
+scikit-learn(朴素贝叶斯)      76.8%           134
+scikit-learn(svm)             76.9%           121
+**TextGrocery**           **79.6%**       **49**
+========================  =============  ===============
+
+安装
+====
+
+1. 通过\ `GitHub <https://github.com/2shou/TextGrocery>`_\ （最新版本）
+
+.. code:: bash
+
+    git clone https://github.com/2shou/TextGrocery.git
+    cd TextGrocery
+    make
+
+2. 通过\ `pip <https://pypi.python.org/pypi?:action=display&name=tgrocery>`_\ （更稳定）
+
+.. code:: bash
+
+    pip install tgrocery
+
+使用
 ====
 
 .. toctree::
     :maxdepth: 2
 
-    performance
-    install
     quick-start
     api
