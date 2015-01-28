@@ -18,7 +18,7 @@ TextGrocery整合了`结巴分词 <https://github.com/fxsjy/jieba>`_作为默认
 ========================  ==========  =============
 scikit-learn(朴素贝叶斯)  76.8%       134
 scikit-learn(svm)         76.9%       121
-**TextGrocery**           **79.6%**   **49** 
+**TextGrocery**           **79.6%**   **49**
 ========================  ==========  =============
 
 Contents:
