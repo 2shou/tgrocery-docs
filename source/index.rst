@@ -9,7 +9,6 @@
 TextGrocery是一个基于
 `LibLinear <http://www.csie.ntu.edu.tw/~cjlin/liblinear>`_
 的短文本分类工具，特点是高效易用。
-
 TextGrocery整合了
 `结巴分词 <https://github.com/fxsjy/jieba>`_
 作为默认的分词单元，以支持中文的短文本分类。
@@ -17,7 +16,9 @@ TextGrocery整合了
 性能
 ====
 
-
+* 训练集：来自32个类别的4.8万条中文新闻标题
+* 测试集：来自32个类别的1.6万条中文新闻标题
+* 与scikit-learn的svm和朴素贝叶斯算法做横向对比
 
 ========================  =============  ===============
 分类器                      准确率（%）   		计算时间（秒）
