@@ -113,14 +113,17 @@ def Grocery.get_load_status()
 def Grocery.predict(single_text)
   对单一文本预测其类别（预测前会检测模型是否已训练或已加载）
 
-def save()
+def Grocery.save()
   保存模型到本地
 
   * 默认文件夹名是Grocery的name属性
   * 如果本地存在同名文件夹，将被覆盖
 
-def load()
+def Grocery.load()
   从本地加载模型
 
   * 默认文件夹名是Grocery的name属性
   * 分词单元的信息不会被自动加载，如果自定义了分词单元，需要在创建Grocery的过程中再次指定
+
+def Grocery.test(test_src, delimiter='\t')
+  通过测试样本
