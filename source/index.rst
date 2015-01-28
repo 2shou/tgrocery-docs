@@ -30,7 +30,6 @@ scikit-learn(svm)             76.9%           121
 安装
 ====
 
-两种方式：
 1. 通过
    `GitHub <https://github.com/2shou/TextGrocery>`_
    （版本更新）
@@ -38,6 +37,7 @@ scikit-learn(svm)             76.9%           121
 .. code:: bash
 
     git clone https://github.com/2shou/TextGrocery.git
+    cd TextGrocery
     make
 
 2. 通过
