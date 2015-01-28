@@ -84,12 +84,15 @@ scikit-learn(svm)             76.9%           121
 API文档
 =======
 
+.. toctree::
+    :maxdepth: 2
+
+    api
+
 Grocery
 -------
 
 class tgrocery.Grocery(name, custom_tokenize=None)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
   * 确定你的分类项目名
   * custom_tokenize会覆盖默认的分词单元（结巴分词），要求custom_tokenize的类型必须是函数
 
@@ -128,7 +131,7 @@ def Grocery.test(test_src, delimiter='\t')
   * test_src可以是嵌套列表或文件路径
 
     * 嵌套列表：实体是两个字符串构成的tuple，第一个字符串是类别标签，第二个字符串是语料文本
-    * 文件路径：一行为一个测试样本，类别标签在前、语料文本在后，默认分隔符是\ ``\t``
+    * 文件路径：一行为一个测试样本，类别标签在前、语料文本在后，默认分隔符是\ ``\\t``
   
   * delimiter是解析测试样本时所用的分隔符，仅在test_src为文件路径时生效
   * 返回一个\ ``GroceryTestResult``\ 对象
