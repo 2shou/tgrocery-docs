@@ -8,7 +8,7 @@
 
 TextGrocery是一个基于\ `LibLinear <http://www.csie.ntu.edu.tw/~cjlin/liblinear>`_\ 和\ `结巴分词 <https://github.com/fxsjy/jieba>`_\ 的短文本分类工具，特点是高效易用，同时支持中文和英文语料。
 
-`GitHub传送门 <https://github.com/2shou/TextGrocery>`_
+`GitHub项目链接 <https://github.com/2shou/TextGrocery>`_
 
 性能
 ====
@@ -97,7 +97,7 @@ def Grocery.train(train_src, delimiter='\t')
   * train_src可以是嵌套列表或文件路径
 
       * 嵌套列表：实体是两个字符串构成的tuple，第一个字符串是类别标签，第二个字符串是语料文本
-      * 文件路径：一行为一个训练样本，类别标签在前、语料文本在后，默认分隔符是\ ``\\t``
+      * 文件路径：一行为一个训练样本，类别标签在前、语料文本在后，默认分隔符是\ ``\t``
 
   * delimiter是解析训练样本时所用的分隔符，仅在train_src为文件路径时生效
 
@@ -126,7 +126,7 @@ def Grocery.test(test_src, delimiter='\t')
   * test_src可以是嵌套列表或文件路径
 
     * 嵌套列表：实体是两个字符串构成的tuple，第一个字符串是类别标签，第二个字符串是语料文本
-    * 文件路径：一行为一个测试样本，类别标签在前、语料文本在后，默认分隔符是\ ``\\t``
+    * 文件路径：一行为一个测试样本，类别标签在前、语料文本在后，默认分隔符是\ ``\t``
   
   * delimiter是解析测试样本时所用的分隔符，仅在test_src为文件路径时生效
   * 返回一个\ ``GroceryTestResult``\ 对象
