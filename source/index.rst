@@ -88,6 +88,8 @@ Grocery
 -------
 
 class tgrocery.Grocery(name, custom_tokenize=None)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
   * 确定你的分类项目名
   * custom_tokenize会覆盖默认的分词单元（结巴分词），要求custom_tokenize的类型必须是函数
 
