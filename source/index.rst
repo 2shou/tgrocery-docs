@@ -100,6 +100,6 @@ class tgrocery.Grocery(name, custom_tokenize=None)
 def Grocery.train(train_src, delimiter='\t')
   输入训练样本，生成分类模型
   * train_src可以是嵌套列表或文件路径
-      嵌套列表：实体是两个字符串构成的tuple，第一个字符串是类别标签，第二个字符串是语料
-      文件：类别标签在前、语料在后，默认分隔符是``\t``
+      * 嵌套列表：实体是两个字符串构成的tuple，第一个字符串是类别标签，第二个字符串是语料文本
+      * 文件路径：一行为一个训练样本，类别标签在前、语料文本在后，默认分隔符是``\t``
   * delimiter仅在train_src为文件路径时生效，可以自定义文件的分隔符
