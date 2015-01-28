@@ -13,7 +13,7 @@ TextGrocery整合了`结巴分词 <https://github.com/fxsjy/jieba>`_作为默认
 性能
 ====
 
-:duref:`ref <simple-tables>`
+
 
 ========================  ==========  =============
 分类器                    准确率（%） 计算时间（秒）
@@ -22,18 +22,3 @@ scikit-learn(朴素贝叶斯)  76.8%       134
 scikit-learn(svm)         76.9%       121
 **TextGrocery**           **79.6%**   **49**
 ========================  ==========  =============
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-
-
-索引
-====
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
