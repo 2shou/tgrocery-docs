@@ -27,3 +27,42 @@ scikit-learn(朴素贝叶斯)  	76.8%           134
 scikit-learn(svm)         	76.9%           121
 **TextGrocery**           **79.6%**       **49**
 ========================  =============  ===============
+
+快速开始
+=======
+
+.. code:: python
+
+    >>> from tgrocery import Grocery
+    # 新开张一个杂货铺（别忘了取名）
+    >>> grocery = Grocery('sample')
+    # 训练文本可以用列表传入
+    >>> train_src = [
+        ('education', 'Student debt to cost Britain billions within decades'),
+        ('education', 'Chinese education for TV experiment'),
+        ('sports', 'Middle East and Asia boost investment in top level sports'),
+        ('sports', 'Summit Series look launches HBO Canada sports doc series: Mudhar')
+    ]
+    >>> grocery.train(train_src)
+    # 也可以用文件传入（默认以tab为分隔符，也支持自定义）
+    >>> grocery.train('train_ch.txt')
+    # 保存模型
+    >>> grocery.save()
+    # 加载模型（名字和保存的一样）
+    >>> new_grocery = Grocery('sample')
+    >>> new_grocery.load()
+    # 预测
+    >>> new_grocery.predict('Abbott government spends $8 million on higher education media blitz')
+    education
+    # 测试
+    >>> test_src = [
+        ('education', 'Abbott government spends $8 million on higher education media blitz'),
+        ('sports', 'Middle East and Asia boost investment in top level sports'),
+    ]
+    >>> new_grocery.test(test_src)
+    # 输出准确率
+    1.0
+    # 同样可支持文件传入
+    >>> new_grocery.test('test_ch.txt')
+    # 自定义分词模块（必须是一个函数）
+    >>> custom_grocery = Grocery('custom', custom_tokenize=list)
