@@ -95,11 +95,11 @@ API文档
 Grocery
 -------
 
-class tgrocery.Grocery(name, custom_tokenize=None)
+.. class tgrocery.Grocery(name, custom_tokenize=None)
   * 确定你的分类项目名
   * custom_tokenize会覆盖默认的分词单元（结巴分词），要求custom_tokenize的类型必须是函数
 
-def Grocery.train(train_src, delimiter='\t')
+.. def Grocery.train(train_src, delimiter='\t')
   获取训练样本，生成分类模型
 
   * train_src可以是嵌套列表或文件路径
@@ -109,7 +109,7 @@ def Grocery.train(train_src, delimiter='\t')
         
   * delimiter是解析训练样本时所用的分隔符，仅在train_src为文件路径时生效
 
-def Grocery.get_load_status()
+.. def Grocery.get_load_status()
   返回目前模型是否在已训练或已加载的状态
 
 def Grocery.predict(single_text)
