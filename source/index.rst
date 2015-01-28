@@ -87,3 +87,12 @@ scikit-learn(svm)             76.9%           121
     # 自定义分词模块（必须是一个函数）
     >>> custom_grocery = Grocery('custom', custom_tokenize=list)
 
+API文档
+=======
+
+Grocery
+-------
+
+class tgrocery.Grocery(name, custom_tokenize=None)
+  * 确定你的分类项目名
+  * custom_tokenize会覆盖默认的分词单元（结巴分词），要求custom_tokenize的类型必须是函数，否则会报错
