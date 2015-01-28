@@ -6,11 +6,7 @@
 欢迎使用TextGrocery
 ===================
 
-TextGrocery是一个基于
-`LibLinear <http://www.csie.ntu.edu.tw/~cjlin/liblinear>`_
-和
-`结巴分词 <https://github.com/fxsjy/jieba>`_
-的短文本分类工具，特点是高效易用，同时支持中文和英文语料。
+TextGrocery是一个基于\ `LibLinear <http://www.csie.ntu.edu.tw/~cjlin/liblinear>`_\ 和\ `结巴分词 <https://github.com/fxsjy/jieba>`_\ 的短文本分类工具，特点是高效易用，同时支持中文和英文语料。
 
 `GitHub传送门 <https://github.com/2shou/TextGrocery>`_
 
@@ -32,22 +28,16 @@ scikit-learn(svm)             76.9%           121
 安装
 ====
 
-1. 通过
-   `GitHub <https://github.com/2shou/TextGrocery>`_
-   （版本更新）
+1. 通过\ `GitHub <https://github.com/2shou/TextGrocery>`_\ （最新版本）
 
-.. code:: bash
-
+::
     git clone https://github.com/2shou/TextGrocery.git
     cd TextGrocery
     make
 
-2. 通过
-   `pip <https://pypi.python.org/pypi?:action=display&name=tgrocery>`_
-   （更稳定）
+2. 通过\ `pip <https://pypi.python.org/pypi?:action=display&name=tgrocery>`_\ （更稳定）
 
-.. code:: bash
-
+::
     pip install tgrocery
 
 快速开始
@@ -95,29 +85,26 @@ API文档
 Grocery
 -------
 
-.. class tgrocery.Grocery(name, custom_tokenize=None)
-
+class tgrocery.Grocery(name, custom_tokenize=None)
   * 确定你的分类项目名
   * custom_tokenize会覆盖默认的分词单元（结巴分词），要求custom_tokenize的类型必须是函数
 
-.. def Grocery.train(train_src, delimiter='\t')
-
+def Grocery.train(train_src, delimiter='\t')
   获取训练样本，生成分类模型
 
   * train_src可以是嵌套列表或文件路径
 
       * 嵌套列表：实体是两个字符串构成的tuple，第一个字符串是类别标签，第二个字符串是语料文本
-      * 文件路径：一行为一个训练样本，类别标签在前、语料文本在后，默认分隔符是 ``\\t``
-        
+      * 文件路径：一行为一个训练样本，类别标签在前、语料文本在后，默认分隔符是\ ``\\t``
+
   * delimiter是解析训练样本时所用的分隔符，仅在train_src为文件路径时生效
 
-.. def Grocery.get_load_status()
-
+def Grocery.get_load_status()
   返回目前模型是否在已训练或已加载的状态
 
 def Grocery.predict(single_text)
   * 对单一文本预测其类别（预测前会检测模型是否已训练或已加载）
-  * 返回一个 ``GroceryPredictResult`` 对象
+  * 返回一个\ ``GroceryPredictResult``\ 对象
 
 def Grocery.save()
   保存模型到本地
@@ -137,10 +124,10 @@ def Grocery.test(test_src, delimiter='\t')
   * test_src可以是嵌套列表或文件路径
 
     * 嵌套列表：实体是两个字符串构成的tuple，第一个字符串是类别标签，第二个字符串是语料文本
-    * 文件路径：一行为一个测试样本，类别标签在前、语料文本在后，默认分隔符是 ``\\t``
+    * 文件路径：一行为一个测试样本，类别标签在前、语料文本在后，默认分隔符是\ ``\\t``
   
   * delimiter是解析测试样本时所用的分隔符，仅在test_src为文件路径时生效
-  * 返回一个 ``GroceryTestResult`` 对象
+  * 返回一个\ ``GroceryTestResult``\ 对象
 
 GroceryPredictResult
 --------------------
