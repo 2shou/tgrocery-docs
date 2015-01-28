@@ -34,14 +34,18 @@ scikit-learn(svm)             76.9%           121
 1. 通过
    `GitHub <https://github.com/2shou/TextGrocery>`_
    （版本更新）
-   .. code:: bash
+
+.. code:: bash
 
     git clone https://github.com/2shou/TextGrocery.git
     make
 
-2. 通过pip（更稳定）
-   .. code:: bash
-    
+2. 通过
+   `pip <https://pypi.python.org/pypi?:action=display&name=tgrocery>`_
+   （更稳定）
+
+.. code:: bash
+
     pip install tgrocery
 
 快速开始
